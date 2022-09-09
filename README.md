@@ -26,6 +26,13 @@ You can also define time during task creation, let's if you have created a task 
 
 https://boardinfinity-pro-app.herokuapp.com/v1/task/list
 
+## Api-end points
+
+There are two end points:-
+
+1. Get(../list):- It will list get all task available in database.  https://boardinfinity-pro-app.herokuapp.com/v1/task/list 
+
+2. Post(../add):- You can make request using Postman to add new task.  https://boardinfinity-pro-app.herokuapp.com/v1/task/add 
 
 ## Tech Stack
 
