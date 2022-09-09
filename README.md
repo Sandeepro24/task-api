@@ -1,5 +1,5 @@
 
-# TaskWithDuration API
+# TaskWithDuration API✨️
 
 This project is basically to design a API, havin input fields are:-
 Name of your Task
@@ -15,14 +15,14 @@ duration- After this much of time task will be deleted from database
 
 
 
-## Features
+## Features✨️
 
 - Add an task easily it will store in database
 - Description about your task
 Duration (Coolest Feature) 
 You can also define time during task creation, let's if you have created a task at 1:30pm and you have given duration as 30 minutes then after 2:00pm your task will get automatically deleted from database.
 
-## Demo
+## Demo✨️
 
 https://boardinfinity-pro-app.herokuapp.com/v1/task/list
 
