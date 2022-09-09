@@ -1,4 +1,4 @@
-# task-api
+# API for Task with Duration
 Hosted on Heroku
 Here is the link:- https://boardinfinity-pro-app.herokuapp.com/v1/task/list
 
