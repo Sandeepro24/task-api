@@ -1,7 +1,9 @@
+//Requiring module
 const mongoose = require("mongoose");
 
+// connecting to mongodb atlas database
 mongoose
-  .connect(process.env.MONGO_CONNECTION_URL, {
+  .connect(process.env.MONGO_CONNECTION_URL, {   //process.env.MONGO_CONNECTION_URL fetching url from .env file
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
