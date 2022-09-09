@@ -25,14 +25,14 @@ require("./src/database/connection");
 app.use("/v1", require("./src/router/routes"));
 
 //Using nodejs cron to schedule a task for deletion of documents based on creation Time
-cron.schedule(`*/1 * * * * *`, async () => {
-  const todos = await Todo.find({});
-  todos.forEach((todo) => {
-    const currentTime = moment(new Date());
-    const createdAt = moment(todo.createdAt);
-    const timeDifference = currentTime.diff(createdAt, "minutes");
-    if (timeDifference >= todo.duration) {
-      Todo.findByIdAndDelete(todo._id, function (err, docs) {
+cron.schedule(`*/1 * * * * *`, async () => {  //run every second
+  const todos = await Todo.find({});   //finding all task
+  todos.forEach((todo) => {    //visiting each task one by one
+    const currentTime = moment(new Date());   //current time
+    const createdAt = moment(todo.createdAt);  //creation time of task
+    const timeDifference = currentTime.diff(createdAt, "minutes");  // calculating time difference between current time and time of creation of task
+    if (timeDifference >= todo.duration) {    // now checking if time difference is greater than or equal to the duration(time assigned to each task at the time of creation post which it should be deleted) 
+      Todo.findByIdAndDelete(todo._id, function (err, docs) { // if above condition true then find that task using unique id and delete it.
         if (!err) {
           console.log(docs);
         } else {
