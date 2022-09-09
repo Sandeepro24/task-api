@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Creating Schema of our database
 const todoSchema = mongoose.Schema(
   {
     taskName: { type: String, required: true },
@@ -7,7 +8,7 @@ const todoSchema = mongoose.Schema(
     creator: { type: String, required: true },
     duration: { type: Number, required: true },
   },
-  { timestamps: true }
+  { timestamps: true } // time of creation 
 );
 
 const Todo = mongoose.model("Todo", todoSchema);
